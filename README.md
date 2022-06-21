@@ -1,3 +1,9 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/Special-graphic-formats/imagezero)
+![GitHub Release Date](https://img.shields.io/github/release-date/Special-graphic-formats/imagezero)
+![GitHub repo size](https://img.shields.io/github/repo-size/Special-graphic-formats/imagezero)
+![GitHub all releases](https://img.shields.io/github/downloads/Special-graphic-formats/imagezero/total)
+![GitHub](https://img.shields.io/github/license/Special-graphic-formats/imagezero)
+
 # ImageZero
 
 ImageZero is a high-performance lossless RGB color image

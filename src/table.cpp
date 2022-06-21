@@ -1,8 +1,8 @@
 #include <cstdlib>
 #include <cstdio>
 
-#include <imagezero/libiz.h>
-#include <imagezero/iz_p.h>
+#include "libiz.h"
+#include "iz_p.h"
 
 namespace IZ {
 

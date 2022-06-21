@@ -2,33 +2,19 @@
 #include <cstdlib>
 #include <cstring>
 
-#include <imagezero/libiz.h>
-#include <imagezero/portableimage.h>
-#include <imagezero/file.h>
-
-/*! \mainpage imagezero
- *
- * This package contains the actual ImageZero algorithm written by
- * Christoph Feck.  Some methods have been modified so that they are
- * contained within namespaces, the build system has been rewritten
- * to generate a catkin library, and irrelevant files have been
- * removed.
- *
- * If you are interested in using this algorithm to manipulate ROS
- * images, you probably actually want to look in the imagezero_ros
- * package for direct image manipulation or the imagezero_image_transport
- * package for ROS image_transport plugins.
- */
+#include "libiz.h"
+#include "portableimage.h"
+#include "file.h"
 
 static void decodeIZ(const char *infilename, const char *outfilename)
 {
-    IZ::PortableImage pi;
-    IZ::InputFile infile(infilename);
+    PortableImage pi;
+    InputFile infile(infilename);
     if (!infile.isReadable()) {
         perror("Cannot open input file");
         exit(EXIT_FAILURE);
     }
-    IZ::OutputFile outfile(outfilename);
+    OutputFile outfile(outfilename);
     if (!outfile.isWritable()) {
         perror("Cannot open output file");
         exit(EXIT_FAILURE);
@@ -50,13 +36,13 @@ static void decodeIZ(const char *infilename, const char *outfilename)
 
 static void encodeIZ(const char *infilename, const char *outfilename)
 {
-    IZ::PortableImage pi;
-    IZ::InputFile infile(infilename);
+    PortableImage pi;
+    InputFile infile(infilename);
     if (!infile.isReadable()) {
         perror("Cannot open input file");
         exit(EXIT_FAILURE);
     }
-    IZ::OutputFile outfile(outfilename);
+    OutputFile outfile(outfilename);
     if (!outfile.isWritable()) {
         perror("Cannot open output file");
         exit(EXIT_FAILURE);
@@ -100,7 +86,7 @@ int main(int argc, char *argv[])
         exit(EXIT_SUCCESS);
     }
     if (argc == 2 && (!strncmp(argv[1], "-v", 2) || !strncmp(argv[1], "--v", 3))) {
-        printf("%s 0.2.4\n"
+        printf("%s 0.1\n"
         "High-performance lossless RGB color image codec\n"
         "Copyright (c) 2012, Christoph Feck <christoph@maxiom.de>\n", argv[0]);
         exit(EXIT_SUCCESS);

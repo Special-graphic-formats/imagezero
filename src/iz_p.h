@@ -8,13 +8,13 @@
 
 namespace IZ {
 
-const int CONTEXT_COUNT = 9;
-const int CONTEXT_BITS = 4;
-const int CONTEXT_SIZE_REGULAR = 1;
-const int CONTEXT_SIZE_RLE = 3;
+#define CONTEXT_COUNT 9
+#define CONTEXT_BITS 4
+#define CONTEXT_SIZE_REGULAR 1
+#define CONTEXT_SIZE_RLE 3
 
-const int MAX_CODE_LENGTH = 6;
-const int MAX_CODE_VALUE = (1 << MAX_CODE_LENGTH);
+#define MAX_CODE_LENGTH 6
+#define MAX_CODE_VALUE (1 << MAX_CODE_LENGTH)
 
 extern unsigned int staticdBits[1 << (2 * CONTEXT_BITS)];
 extern const unsigned int staticdCount[1 << (2 * CONTEXT_BITS)];
